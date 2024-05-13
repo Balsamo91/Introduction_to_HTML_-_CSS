@@ -1,0 +1,128 @@
+<!-- To add the comment you can type just like this command or short cut is command+/-->
+<!-- With DOCTYPE it tells the web broswer that it this is a web broswer -->
+<!DOCTYPE html> 
+<html lang="en">
+<!-- Insie the html tag this is all the web site, lang="en" it tells the website that this website is in English-->
+<head>
+    <!-- Hold information about the website but the meta is nothing is seen. charset is the encoding type. -->
+    <meta charset="UTF-8">
+    <!-- name is ???. Content is telling that the maximum width of the website is the maximum of the device width screen. the inital-scale is ???? -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title this is the title that display the title in the tab of the broswer-->
+    <title>My Website</title>
+    <!-- The below is SPECTRE.CSS >>> https://picturepan2.github.io/spectre/getting-started/installation.html -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+
+
+    <!-- in the Style we will write CSS !!!!!!! -->
+    <!-- Syntax of CSS
+        start with >> Selector {
+            property: <value>;
+        }
+    -->
+    <!-- <style>
+        li {
+            color:blueviolet;
+            font-size: 24px;
+        }
+        .my-text {
+            color: chocolate;
+        }
+
+        #unique-text {
+            color: cornflowerblue;
+        }
+
+        div {
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        #this-is-a-unique-div-using-an-id {
+            color: aliceblue;
+        }
+
+    </style> -->
+</head>
+<!--   in the body it holds the the content/data of the website   -->
+<body>
+    <header class="navbar">
+        <section class="navbar-section">
+            <a href="..." class="navbar-brand mr-2">Spectre.css</a>
+            <a href="..." class="btn btn-link">Docs</a>
+            <a href="..." class="btn btn-link">GitHub</a>
+        </section>
+        <section class="navbar-section">
+            <div class="input-group input-inline">
+            <input class="form-input" type="text" placeholder="search">
+            <button class="btn btn-primary input-group-btn">Search</button>
+            </div>
+        </section>
+    </header>
+
+    <h1>This is Heading 1, the heading is the FONT size</h1>
+    <h3>This is Heading 3</h3>
+    <h6>This is Heading 6, and there are not more!!!!</h6>
+    
+    <!-- Paragraph for simple html -->
+    <p> This is a Paragraph</p>
+
+    <!-- DIV is used to group multiple lines and re-use them -->
+    <div>
+    <p class="my-text"> This is a Paragraph with class</p>
+
+    <!-- The below class is using the the spectre.css -->
+    <button class="btn btn-success btn-lg" >My super button</button>
+
+
+    <p id="unique-text"> This is a Paragraph with ID</p>
+    </div>
+
+    <div id="this-is-a-unique-div-using-an-id">
+
+    </div>
+
+    <a href="https://google.com">Let's google that!</a>
+
+    <a href="https://google.com">
+        <h2>Let's google that! With a bigger FONT</h2>
+    </a>
+
+    <img width="600" height="400" src="data:image/jpeg;base64,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"
+        alt="Dog is running in the park">
+
+    <!-- Type of list, it will show the below with numbers on the front-->
+    <ol>
+        <li>First Item</li>
+        <li>Second Item</li>
+    </ol>
+
+    <!-- Type of list, it will print with a dot in before the each item list below -->
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+    </table>
+
+    <!--  -->
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
