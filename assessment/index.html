@@ -11,12 +11,14 @@
         body {
             margin-left: 50px;
             margin-right: 50px;
+            display: flex;
+            flex-direction: column;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* margin-top: 10px; */
+            flex: 1;/*Ensures the container takes up remaining space */
         }
         .gifs {
             margin-top: 10px;
@@ -37,6 +39,15 @@
             object-fit: cover;/* Ensures the content covers the circular area */
             transform: scale(2);/* Adjust scale to fit content properly */
         }
+        .gifs a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 1;/* Ensure it is on top of the iframe */
+        }
         .account-text {
             margin-top: 20px;
         }
@@ -49,21 +60,32 @@
         .table-warehouse {
             margin-top: 50px;
         }
+        .footer-footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e7e7e7;
+            position: fixed;
+            bottom: 0;
+            max-width: 100%; /* to be checked */
+            min-width: 93%; /* to be checked */
+        }
     </style>
 </head>
 <body>
     <header class="navbar">
         <section class="navbar-section">
             <div class="left-navbar-section">
-                <a href="index.html" class="btn btn-link">Home Page</a>
+                <a href="purchase.html" class="btn btn-link">Purchase</a>
                 <a href="sale.html" class="btn btn-link">Sale</a>
             </div>
         </section>
         <section class="navbar-center">
             <div class="container">
-                <div class="gifs">
-                    <iframe src="https://giphy.com/embed/PG1nBLxrY8ZlS08pTh" frameBorder="0" class="giphy-embed" allowfullscreen></iframe>
-                </div>
+                    <div class="gifs">
+                        <iframe src="https://giphy.com/embed/PG1nBLxrY8ZlS08pTh" frameBorder="0" class="giphy-embed" allowfullscreen></iframe>
+                        <a href="index.html"></a>
+                    </div>
                 <div class="account-text">
                     <h5 class="text-primary">Account: €12500</h5>
                 </div>
@@ -71,8 +93,8 @@
         </section>
         <section class="navbar-section">
             <div class="right-navbar-section">
-                <a href="purchase.html" class="btn btn-link">Purchase</a>
                 <a href="balance.html" class="btn btn-link">Balance</a>
+                <a href="history.html" class="btn btn-link">History</a>
             </div>
         </section>
     </header>
@@ -100,6 +122,10 @@
             </tr>
         </table>
     </div>
+
+    <footer class="footer-footer">
+        <p>&copy; 2024 Warehouse Management Company. All rights reserved.</p>
+    </footer>
     
 </body>
 </html>
