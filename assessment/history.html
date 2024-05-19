@@ -8,15 +8,31 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
     <style>
-        body {
+        /* body {
+            /* margin-left: 50px;
+            margin-right: 50px; */
+            /* display: flex;
+            flex-direction: column; */
+        /* }  */
+        .container-left {
             margin-left: 50px;
             margin-right: 50px;
+            display: flex;
+            flex-direction: column;
         }
         .container {
+            margin-left: 50px;
+            margin-right: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* margin-top: 10px; */
+            flex: 1;/*Ensures the container takes up remaining space */
+        }
+        .container-right {
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
         }
         .gifs {
             margin-top: 10px;
@@ -57,16 +73,34 @@
         }
         .table-warehouse {
             margin-top: 50px;
+            width: 100%;
+        }
+        .table-content {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .footer-footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e7e7e7;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            /* max-width: 100%; /* to be checked */
+            /* min-width: 93%; to be checked */ 
         }
     </style>
 </head>
 <body>
     <header class="navbar">
-        <section class="navbar-section">
-            <div class="left-navbar-section">
-                <a href="purchase.html" class="btn btn-link">Purchase</a>
-                <a href="sale.html" class="btn btn-link">Sale</a>
-            </div>
+        <div class="container-left">
+            <section class="navbar-section">
+                <div class="left-navbar-section">
+                    <a href="purchase.html" class="btn btn-link">Purchase</a>
+                    <a href="sale.html" class="btn btn-link">Sale</a>
+                </div>
+        </div>
         </section>
         <section class="navbar-center">
             <div class="container">
@@ -79,15 +113,20 @@
                 </div>
             </div>
         </section>
+        <div class="container-right">
         <section class="navbar-section">
-            <div class="right-navbar-section">
-                <a href="balance.html" class="btn btn-link">Balance</a>
-                <a href="history.html" class="btn btn-link">History</a>
+                <div class="right-navbar-section">
+                    <a href="balance.html" class="btn btn-link">Balance</a>
+                    <a href="history.html" class="btn btn-link">History</a>
+                </div>
             </div>
         </section>
     </header>
 
 
+    <footer class="footer-footer">
+        <p>&copy; 2024 Warehouse Management Company. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
