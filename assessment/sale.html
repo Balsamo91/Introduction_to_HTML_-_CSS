@@ -14,6 +14,31 @@
             /* display: flex;
             flex-direction: column; */
         /* }  */
+        .navbar {
+            background-color: #f0f0f0; /* Change this to your desired color */
+            padding: 1px 0; /* Add padding for better appearance */
+            width: 100%; /* Ensure the navbar spans the full width */
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .navbar-section .btn-link {
+            padding: 10px 20px;
+            border: 2px solid #007bff;
+            border-radius: 20px;
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 5px; /* Adjusted margin */
+            display: inline-flex; /* Added display property */
+            align-items: center; /* Added align-items property */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar-section .btn-link h3 {
+            margin: 0; /* Remove default margin */
+            line-height: 1; /* Added line-height property */
+        }
+        .navbar-section .btn-link:hover {
+            background-color: #007bff; /* Change the background color on hover */
+            color: #fff; /* Change the text color on hover */
+        }
         .container-left {
             margin-left: 50px;
             margin-right: 50px;
@@ -63,10 +88,20 @@
             z-index: 1;/* Ensure it is on top of the iframe */
         }
         .account-text {
-            margin-top: 20px;
+            margin-top: 10px;
+            text-align: left;
+            position: absolute;
+            margin-left: 50px;
+            top: 220px; /* Adjust this value to position it below "Purchase" */
+            left: 0;
+        }
+        .title-program {
+            margin-top: 10px;
         }
         .left-navbar-section {
             margin-top: -50px;
+            display: flex;
+            gap: 20px;
         }
         .right-navbar-section {
             margin-top: -50px;
@@ -93,6 +128,7 @@
         .form-group-main {
             margin-left: 50px;
             margin-right: 50px;
+            margin-top: 60px;
         }
         .button-submit {
             margin-top: 10px;
@@ -101,68 +137,76 @@
         .hidden-iframe {
             display: none;
         }
+        .content-wrapper {
+            padding-bottom: 80px; /* Adjust the value to accommodate the footer height */
+        }
     </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="container-left">
-            <section class="navbar-section">
-                <div class="left-navbar-section">
-                    <a href="purchase.html" class="btn btn-link"><h3>Purchase</h3></a>
-                    <a href="sale.html" class="btn btn-link"><h3>Sale</h3></a>
-                </div>
-        </div>
-        </section>
-        <section class="navbar-center">
-            <div class="container">
-                    <div class="gifs">
-                        <iframe src="https://giphy.com/embed/PG1nBLxrY8ZlS08pTh" frameBorder="0" class="giphy-embed" allowfullscreen></iframe>
-                        <a href="index.html"></a>
+    <div class="content-wrapper">
+        <header class="navbar">
+            <div class="container-left">
+                <section class="navbar-section">
+                    <div class="left-navbar-section">
+                        <a href="purchase.html" class="btn btn-link"><h3>Purchase</h3></a>
+                        <a href="sale.html" class="btn btn-link"><h3>Sale</h3></a>
                     </div>
-                <div class="account-text">
-                    <h5 class="text-primary">Account: €12500</h5>
-                </div>
+                    <div class="account-text">
+                        <h5 class="text-primary">Account: €12500</h5>
+                    </div>
             </div>
-        </section>
-        <div class="container-right">
-        <section class="navbar-section">
-                <div class="right-navbar-section">
-                    <a href="balance.html" class="btn btn-link"><h3>Balance</h3></a>
-                    <a href="history.html" class="btn btn-link"><h3>History</h3></a>
+            </section>
+            <section class="navbar-center">
+                <div class="container">
+                        <div class="gifs">
+                            <iframe src="https://giphy.com/embed/PG1nBLxrY8ZlS08pTh" frameBorder="0" class="giphy-embed" allowfullscreen></iframe>
+                            <a href="index.html"></a>
+                        </div>
+                        <div class="title-program">
+                            <h4 class="text-primary">The Warehouse Company</h4>
+                        </div>
                 </div>
-            </div>
-        </section>
-    </header>
+            </section>
+            <div class="container-right">
+            <section class="navbar-section">
+                    <div class="right-navbar-section">
+                        <a href="balance.html" class="btn btn-link"><h3>Balance</h3></a>
+                        <a href="history.html" class="btn btn-link"><h3>History</h3></a>
+                    </div>
+                </div>
+            </section>
+        </header>
 
-    <div class="form-group-main">
-        <form action="/submit" method="post" target="hidden-iframe">
-            <fieldset>
-            <div class="form-group">
-                <label class="form-label" for="input-product-name">Enter the name of your product: </label>
-                <input class="form-input" type="text" id="input-product-name" placeholder="ex: Car" required>
-            </div>
-            <div class="form-group-1">
-                <label class="form-label" for="money">Enter the unit Price €: </label>
-                <input class="form-input" type="number" id="money" name="money" placeholder="minimum is 1" min="1" required>
-            </div>
-            <div class="form-group-2">
-                <label class="form-label" for="quantity">Enter the Quantity: </label>
-                <input class="form-input" type="number" id="quantity" name="quantity" placeholder="minimum is 1" min="1" required>
-            </div>
-            <div class="button-submit">
-                <input class="btn btn-primary" type="submit" value="Submit">
-            </div>
-            </fieldset>
-        </form>
+        <div class="form-group-main">
+            <form action="/submit" method="post" target="hidden-iframe">
+                <fieldset>
+                <div class="form-group">
+                    <label class="form-label" for="input-product-name">Enter the name of your product: </label>
+                    <input class="form-input" type="text" id="input-product-name" placeholder="ex: Car" required>
+                </div>
+                <div class="form-group-1">
+                    <label class="form-label" for="money">Enter the unit Price €: </label>
+                    <input class="form-input" type="number" id="money" name="money" placeholder="minimum is 1" min="1" required>
+                </div>
+                <div class="form-group-2">
+                    <label class="form-label" for="quantity">Enter the Quantity: </label>
+                    <input class="form-input" type="number" id="quantity" name="quantity" placeholder="minimum is 1" min="1" required>
+                </div>
+                <div class="button-submit">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </div>
+                </fieldset>
+            </form>
+        </div>
+
+
+        <footer class="footer-footer">
+            <p>&copy; 2024 Warehouse Management Company. All rights reserved.</p>
+        </footer>
+
+        <!-- Hidden iframe to handle form submission -->
+        <iframe name="hidden-iframe" class="hidden-iframe"></iframe>
     </div>
-
-
-    <footer class="footer-footer">
-        <p>&copy; 2024 Warehouse Management Company. All rights reserved.</p>
-    </footer>
-
-    <!-- Hidden iframe to handle form submission -->
-    <iframe name="hidden-iframe" class="hidden-iframe"></iframe>
 
 </body>
 </html>

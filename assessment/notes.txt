@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management Company</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <style>
+        /* body {
+            /* margin-left: 50px;
+            margin-right: 50px; */
+            /* display: flex;
+            flex-direction: column; */
+        /* }  */
+        .container-left {
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .account-text {
+            position: absolute;
+            margin-left: 10px;
+            top: 180px; /* Adjust this value to position it below "Purchase" */
+            left: 0;
+            text-align: left;
+        } 
+        .container {
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;/*Ensures the container takes up remaining space */
+        }
+        .container-right {
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        .gifs {
+            margin-top: 10px;
+            align-self: center;
+            width: 150px;/* Adjust the size as needed */
+            height: 150px;/* Ensure it's a square */
+            border-radius: 50%;
+            overflow: hidden;/* This ensures the edges are clipped to the circle */
+            position: relative;/* Required for absolute positioning of the iframe */
+        }
+        .gifs iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;/* Remove default iframe border */
+            object-fit: cover;/* Ensures the content covers the circular area */
+            transform: scale(2);/* Adjust scale to fit content properly */
+        }
+        .gifs a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            z-index: 1;/* Ensure it is on top of the iframe */
+        }
+        .account-text {
+            margin-top: 10px;
+            text-align: left;
+        }
+        .title-program {
+            margin-top: 10px;
+        }
+        .left-navbar-section {
+            margin-top: -50px;
+            display: flex;
+            gap: 20px;
+        }
+        .right-navbar-section {
+            margin-top: -50px;
+        }
+        .table-warehouse {
+            margin-top: 50px;
+            width: 100%;
+        }
+        .table-content {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .footer-footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #e7e7e7;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar-bar">
+        <div class="container-left">
+            <section class="navbar-section">
+                <div class="left-navbar-section">
+                    <a href="purchase.html" class="btn btn-link"><h3>Purchase</h3></a>
+                    <a href="sale.html" class="btn btn-link"><h3>Sale</h3></a>
+                </div>
+                <div class="account-text">
+                    <h5 class="text-primary">Account: €12500</h5>
+                </div>
+            </section>
+        </div>
+        <section class="navbar-center">
+            <div class="container">
+                    <div class="gifs">
+                        <iframe src="https://giphy.com/embed/PG1nBLxrY8ZlS08pTh" frameBorder="0" class="giphy-embed" allowfullscreen></iframe>
+                        <a href="index.html"></a>
+                    </div>
+                <div class="title-program">
+                    <h5 class="text-primary">The Warehouse Company</h5>
+                </div>
+            </div>
+        </section>
+        <div class="container-right">
+        <section class="navbar-section">
+                <div class="right-navbar-section">
+                    <a href="balance.html" class="btn btn-link"><h3>Balance</h3></a>
+                    <a href="history.html" class="btn btn-link"><h3>History</h3></a>
+                </div>
+            </div>
+        </section>
+    </header>
