@@ -8,23 +8,18 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
     <style>
-        /* body {
-            /* margin-left: 50px;
-            margin-right: 50px; */
-            /* display: flex;
-            flex-direction: column; */
-        /* }  */
         .navbar {
-            background-color: #f0f0f0; /* Change this to your desired color */
+            background-color: #FF9F66; /* Change this to your desired color */
             padding: 1px 0; /* Add padding for better appearance */
             width: 100%; /* Ensure the navbar spans the full width */
-            border-bottom: 1px solid #e7e7e7;
+            border-bottom: 1px solid #FFFAE6;
         }
         .navbar-section .btn-link {
             padding: 10px 20px;
-            border: 2px solid #007bff;
+            border: 2px solid #FFFAE6;
+            background-color: #FFFAE6;
             border-radius: 20px;
-            color: #007bff;
+            color: #002379;
             text-decoration: none;
             margin: 0 5px; /* Adjusted margin */
             display: inline-flex; /* Added display property */
@@ -36,7 +31,7 @@
             line-height: 1; /* Added line-height property */
         }
         .navbar-section .btn-link:hover {
-            background-color: #007bff; /* Change the background color on hover */
+            background-color: #002379; /* Change the background color on hover */
             color: #fff; /* Change the text color on hover */
         }
         .container-left {
@@ -95,8 +90,10 @@
             top: 220px; /* Adjust this value to position it below "Purchase" */
             left: 0;
         }
-        .title-program {
+        .title-program h4 {
             margin-top: 10px;
+            color: #FFFAE6 !important;
+            font-weight: bold;
         }
         .left-navbar-section {
             margin-top: -50px;
@@ -115,16 +112,15 @@
             margin-right: 50px;
         }
         .footer-footer {
-            background-color: #f8f9fa;
+            background-color: #FFFAE6;
+            color: #000000;
             padding: 20px;
             text-align: center;
+            font-weight: bold;
             border-top: 1px solid #e7e7e7;
             position: fixed;
             bottom: 0;
             width: 100%;
-            padding-top: 40pxpx;
-            /* max-width: 100%; /* to be checked */
-            /* min-width: 93%; to be checked */ 
         }
         .content-wrapper {
             padding-bottom: 80px; /* Adjust the value to accommodate the footer height */
@@ -194,70 +190,6 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-
-        <div class="timeline">
-            <div class="timeline-item" id="timeline-example-1">
-            <div class="timeline-left">
-                    <a class="timeline-icon" href="#timeline-example-1"></a>
-                </div>
-                <div class="timeline-content">
-                    <div class="table-content">purchase action</div>
-                    <div class="table-content">fanta</div>
-                    <div class="table-content">1</div>
-                    <div class="table-content">100</div>
-                    <div class="table-content">datetime.datetime(2024, 5, 4, 10, 16, 49, 247094)</div>
-                    <!-- tiles structure -->
-                </div>
-                </div>
-            
-                <div class="timeline-item" id="timeline-example-2">
-                <div class="timeline-left">
-                    <a class="timeline-icon icon-lg" href="#timeline-example-2">
-                    <i class="icon icon-check"></i>
-                    </a>
-                </div>
-                <div class="timeline-content">
-                    <div class="table-content">purchase action</div>
-                    <div class="table-content">fanta</div>
-                    <div class="table-content">1</div>
-                    <div class="table-content">100</div>
-                    <div class="table-content">datetime.datetime(2024, 5, 4, 10, 16, 49, 897506)</div>
-                    <!-- tiles structure -->
-                </div>
-                </div>
-                
-                <div class="timeline-item" id="timeline-example-2">
-                    <div class="timeline-left">
-                    <a class="timeline-icon icon-lg" href="#timeline-example-2">
-                        <i class="icon icon-check"></i>
-                    </a>
-                    </div>
-                    <div class="timeline-content">
-                    <div class="table-content">purchase action</div>
-                    <div class="table-content">fanta</div>
-                    <div class="table-content">1</div>
-                    <div class="table-content">100</div>
-                    <div class="table-content">datetime.datetime(2024, 5, 4, 10, 16, 49, 897506)</div>
-                    <!-- tiles structure -->
-                    </div>
-                </div>
-            
-                <div class="timeline-item" id="timeline-example-2">
-                <div class="timeline-left">
-                    <a class="timeline-icon icon-lg" href="#timeline-example-2">
-                    <i class="icon icon-check"></i>
-                    </a>
-                </div>
-                <div class="timeline-content">
-                    <div class="table-content">purchase action</div>
-                    <div class="table-content">fanta</div>
-                    <div class="table-content">1</div>
-                    <div class="table-content">100</div>
-                    <div class="table-content">datetime.datetime(2024, 5, 4, 10, 16, 49, 897506)</div>
-                    <!-- tiles structure -->
-                </div>
-            </div>
         </div>
 
         <footer class="footer-footer">
